@@ -1,5 +1,7 @@
 # Learning Long-Horizon Robot Exploration Strategies for Multi-Object Search in Continuous Action Spaces
-
+<p align="center">
+<img src="img/teaser.png" height="280" title="Decision-making illustation">
+</p>
 Repository providing the source code for the paper "Learning Long-Horizon Robot Exploration Strategies for Multi-Object Search in Continuous Action Spaces", see the [project website](http://multi-object-search.cs.uni-freiburg.de). Please cite the paper as follows:
 
     @article{fabian22exploration,
@@ -8,8 +10,24 @@ Repository providing the source code for the paper "Learning Long-Horizon Robot 
 	  journal={Proceedings of the International Symposium on Robotics Research (ISRR)},
 	  year={2022}
     }
-  
-    
+
+## Simulation video
+<p align="center">
+<img src="img/sim.GIF" height="400" />
+</p>
+
+## Real-world video
+<p align="center">
+<img src="img/real.GIF" height="400" />
+</p>
+
+## Architecture
+<p align="center">
+  <img src="img/architecture.png" title="Approach Architecture">
+</p>
+
+
+
 # Installation
 
 ```
@@ -18,22 +36,22 @@ conda activate igibson
 ```
 
 The code does not work without downloading and unzipping the iGibson dataset.
-First download assets and then, the dataset of the scenes. 
+First download assets and then, the dataset of the scenes.
 Unzip the dataset into the iGibson/data/. folder. After the unzipping, the iGibson/data folder should have a ig_dataset folder.
 Don't forget to download the igibson.key files under https://stanfordvl.github.io/iGibson/dataset.html
- 
+
 ```
 python -m igibson.utils.assets_utils --download_assets
 https://storage.googleapis.com/gibson_scenes/ig_dataset.tar.gz
 ```
 
-After Installing SB3 and iGibson, copy all files which are located in requirements/ , into the respective folders of iGibson/data. You have to overwrite the existing files. 
+After Installing SB3 and iGibson, copy all files which are located in requirements/ , into the respective folders of iGibson/data. You have to overwrite the existing files.
 These files are only used during training in order to use inflated maps.
 
 
 # Run Evaluation
 
-run the model with different scenes using 
+run the model with different scenes using
 
 ```
 
